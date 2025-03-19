@@ -1,0 +1,37 @@
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 20px;
+    background: rgba(13, 26, 13, 0.95);
+    border: 1px solid #00ff9d;
+}
+
+.stats-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #1a2f1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.order-table th {
+    background: #008f11;
+    padding: 12px;
+}
+
+.order-table td {
+    padding: 10px;
+    border-bottom: 1px solid #2d5a2d;
+}
