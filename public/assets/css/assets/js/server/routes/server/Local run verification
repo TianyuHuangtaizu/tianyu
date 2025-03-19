@@ -1,0 +1,8 @@
+# 前端验证
+cd public
+python3 -m http.server 8000
+
+# 后端验证
+cd server
+npm install
+node app.js
