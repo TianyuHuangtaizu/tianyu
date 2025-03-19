@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角洲代练中心</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🕹️ 专业代练陪玩</h1>
+        <p>排位托管｜装备代刷｜战术教学</p>
+    </div>
+
+    <div class="price-list" id="services"></div>
+
+    <script>
+        // 加载服务数据
+        fetch('services.json')
+            .then(r => r.json())
+            .then(data => {
+                let html = '';
+                data.forEach(service => {
+                    html += `
+                        <div class="service-card">
+                            <h3>${service.name}</h3>
+                            <p class="price">💰 ${service.price}元</p>
+                            <p>${service.desc}</p>
+                            <a href="order.html?type=${service.id}" class="order-btn">立即下单</a>
+                        </div>
+                    `;
+                });
+                document.getElementById('services').innerHTML = html;
+            });
+    </script>
+</body>
+</html>
