@@ -1,0 +1,31 @@
+/* 军事绿主色调 */
+:root {
+    --camo-green: #3A5F3B;
+    --hud-glow: #00FF9D;
+    --alert-red: #DC143C;
+}
+
+body.night-mode {
+    background: linear-gradient(
+        45deg,
+        #0d1a0d 0%,
+        #1a2f1a 100%
+    );
+    color: var(--hud-glow);
+    font-family: 'Agency FB', sans-serif;
+}
+
+.tactical-header {
+    border-bottom: 3px solid var(--hud-glow);
+    box-shadow: 0 0 15px var(--hud-glow);
+}
+
+.cta-pulse {
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 5px var(--hud-glow); }
+    50% { box-shadow: 0 0 20px var(--hud-glow); }
+    100% { box-shadow: 0 0 5px var(--hud-glow); }
+}
