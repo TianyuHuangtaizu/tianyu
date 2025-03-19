@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>代练下单表</title>
+    <style>
+        /* 手机友好样式 */
+        body { font-family: Arial; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .form-box { background: #f5f5f5; padding: 20px; border-radius: 10px; }
+        input, select, textarea { 
+            width: 100%; 
+            padding: 12px; 
+            margin: 8px 0; 
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        button { 
+            background: #4CAF50; 
+            color: white; 
+            padding: 14px; 
+            border: none; 
+            width: 100%; 
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>🕹️ 代练订单表</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="你的API密钥">
+            
+            <label>游戏ID：</label>
+            <input type="text" name="game_id" required placeholder="请输入游戏角色名">
+            
+            <label>当前段位：</label>
+            <select name="rank" required>
+                <option value="">选择段位</option>
+                <option>青铜</option>
+                <option>白银</option>
+                <option>黄金</option>
+            </select>
+            
+            <label>目标段位：</label>
+            <select name="target_rank" required>
+                <option value="">选择目标</option>
+                <option>钻石</option>
+                <option>大师</option>
+                <option>王者</option>
+            </select>
+            
+            <label>联系QQ：</label>
+            <input type="tel" name="qq" required pattern="[0-9]{5,12}" placeholder="请输入QQ号">
+            
+            <button type="submit">立即下单</button>
+        </form>
+    </div>
+</body>
+</html>
