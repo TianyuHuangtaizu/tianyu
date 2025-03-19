@@ -1,8 +1,0 @@
-# 使用PM2管理进程
-pm2 start app.js --name "delta-backend"
-
-# 配置Nginx反向代理
-location /api {
-    proxy_pass http://localhost:3000;
-    proxy_set_header X-Real-IP $remote_addr;
-}
