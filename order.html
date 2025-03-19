@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>战术部署中心</title>
+    <link rel="stylesheet" href="assets/css/order.css">
+    <script src="assets/js/order-submit.js" defer></script>
+</head>
+<body>
+    <div class="tactical-overlay">
+        <h2 class="hud-title">⚙️ 作战参数配置</h2>
+        
+        <form id="deltaOrderForm" class="hud-form">
+            <div class="input-group">
+                <label class="hud-label">特工ID：</label>
+                <input type="text" 
+                       name="agentId"
+                       pattern="DSC-[A-Z0-9]{6}"
+                       class="hud-input"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <label class="hud-label">服务类型：</label>
+                <select name="serviceType" class="hud-select" required>
+                    <option value="rank">段位代练</option>
+                    <option value="equip">装备代刷</option>
+                    <option value="coach">战术指导</option>
+                </select>
+            </div>
+
+            <button type="submit" class="cta-btn">确认部署</button>
+        </form>
+    </div>
+</body>
+</html>
