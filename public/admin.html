@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>特勤指挥中心</title>
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>🛡️ 实时作战监控</h1>
+        
+        <!-- 数据统计面板 -->
+        <div class="stats-panel">
+            <div class="stat-card">
+                <h3>进行中任务</h3>
+                <span id="active-orders">0</span>
+            </div>
+            <div class="stat-card">
+                <h3>今日收入</h3>
+                <span id="daily-income">￥0</span>
+            </div>
+        </div>
+
+        <!-- 订单管理表格 -->
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>订单ID</th>
+                    <th>玩家ID</th>
+                    <th>服务类型</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="order-list">
+                <!-- 动态加载数据 -->
+            </tbody>
+        </table>
+    </div>
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>
