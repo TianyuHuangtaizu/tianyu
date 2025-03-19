@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>立即下单</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="order-box">
+        <h2>🔰 填写订单信息</h2>
+        
+        <!-- 下单表单 -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="替换成你的API密钥">
+            
+            <div class="input-group">
+                <label>游戏ID：</label>
+                <input type="text" name="game_id" required 
+                       placeholder="请输入游戏角色名">
+            </div>
+            
+            <div class="input-group">
+                <label>联系QQ：</label>
+                <input type="tel" name="qq" required 
+                       placeholder="方便我们联系你"
+                       pattern="[0-9]{5,12}">
+            </div>
+            
+            <!-- 支付二维码 -->
+            <div class="qrcode-box">
+                <img src="wechat.png" width="200" alt="微信支付">
+                <img src="alipay.png" width="200" alt="支付宝">
+            </div>
+            
+            <button type="submit" class="submit-btn">🔥 提交订单</button>
+        </form>
+    </div>
+</body>
+</html>
